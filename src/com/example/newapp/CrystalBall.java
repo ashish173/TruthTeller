@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class CrystalBall {
 	// member variables
-	String[] answers = { "It is certain",
+	private String[] answers = { "It is certain",
 			"It is decidedly so",
 			"All signs are saying so",
 			"The stars are not aligned",

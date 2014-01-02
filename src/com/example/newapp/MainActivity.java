@@ -1,7 +1,5 @@
 package com.example.newapp;
 
-import java.util.Random;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +9,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	private CrystalBall mCrystalBall = new CrystalBall();
+	
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,19 +28,10 @@ public class MainActivity extends Activity {
 			// when the answer button was clicked, so update the answer label to an answer
 				String answer = null;
 				
-				
-				Random randomGenerator = new Random();
-				int randomNumber = randomGenerator.nextInt(3);
-				if(randomNumber == 0) {
-					answer = "Yes";
-				}
-				else if(randomNumber == 1) {
-					answer = "No";
-				}
-				else {
-					answer = "Maybe";
-				}
+				// called an   
+				answer = mCrystalBall.getAnAnswer();
 				answerLabel.setText(answer);
+				
 			}
 		});
         
